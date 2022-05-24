@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131418;
+}
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+    background: #131418;
+    box-shadow: -3px -3px 8px rgba(255, 255, 255, 0.05),
+                3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.btn .toggle{
+    width: 100px;
+    height: 40px;
+}
+.toggle input{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #131418;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: -8px -4px 9px 0px rgba(255, 255, 255, 0.05),
+                8px 4px 12px 0 rgba(0, 0, 0, 0.5),
+               inset -8px -4px 9px 0px rgba(255, 255, 255, 0.05),
+               inset 8px 4px 12px 0 rgba(0, 0, 0, 0.5);
+}
+input::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background: #131418;
+    border-radius: 50%;
+    box-shadow: -8px -4px 9px 0px rgba(255, 255, 255, 0.05),
+                8px 4px 12px 0 rgba(0, 0, 0, 0.5);
+    transition: left 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+input:checked::before{
+    left: 60px;
+    box-shadow: -8px -4px 9px 0px rgba(255, 255, 255, 0.05);
+}
+.text::before{
+    position: relative;
+    content: "Unchecked";
+    float: right;
+    width: 112px;
+    color: #a6a6a6;
+    margin-left: 25px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.text.check::before{
+    content: 'Checked';
+    color: #7aebeb;
+    text-shadow: 0px 0px 9px #00cec0;
+}

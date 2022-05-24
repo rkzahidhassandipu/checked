@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Neumorphic Checkbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="btn">
+        <div for="click" class="toggle">
+            <input type="checkbox" id="click">
+        </div>
+        <div class="text"></div>
+    </div>
+
+
+    <script>
+        document.querySelector(".toggle").addEventListener("click", function(){
+            document.querySelector(".text").classList.toggle("check")
+        });
+    </script>
+</body>
+</html>
